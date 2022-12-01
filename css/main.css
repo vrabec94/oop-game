@@ -6,10 +6,15 @@ body {
 #board {
     height: 100vh;
     position: relative;
-    background-color: rgb(182, 47, 169);
+    background-color: rgb(238, 175, 232);
 }
 
 #player {
-    background-color: rgb(3, 255, 37);
     position: absolute;
+    background-color: rgb(255, 0, 166);
+}
+
+.obstacle {
+    position: absolute;
+    background-color: rgb(90, 19, 156);
 }
