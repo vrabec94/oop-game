@@ -102,16 +102,21 @@ setInterval(() => {
     // player vs. obstacleInstance
     // collision detection:
     if (
-        player.positionX < obstacleInstance.positionX + obstacleInstance.width &&
-        player.positionX + player.width > obstacleInstance.positionX &&
-        player.positionY < obstacleInstance.positionY + obstacleInstance.height &&
-        player.height + player.positionY > obstacleInstance.positionY
+      player.positionX < obstacleInstance.positionX + obstacleInstance.width &&
+      player.positionX + player.width > obstacleInstance.positionX &&
+      player.positionY < obstacleInstance.positionY + obstacleInstance.height &&
+      player.height + player.positionY > obstacleInstance.positionY
     ) {
-        console.log("collision detected!!");
+      console.log("collision detected!!");
+      //location.href = "gameover.html";
+    }
+    // check if we need to remove current obstacle
+    if (obstacleInstance.positionY <= 0 - obstacleInstance.height) {
+      //remove dom Element
+      obstacleInstance.domElement.remove();
+      obstacles.shift(); // remove first one from the array
     }
   });
-
-  //collision detection
 }, 50);
 
 // remove obstacles from array and from dom

@@ -7,6 +7,7 @@ body {
     height: 100vh;
     position: relative;
     background-color: rgb(238, 175, 232);
+    overflow: hidden;
 }
 
 #player {
@@ -17,4 +18,9 @@ body {
 .obstacle {
     position: absolute;
     background-color: rgb(90, 19, 156);
+}
+
+#page-gameover {
+    text-align: center;
+    background-color: rgb(166, 161, 171);
 }
